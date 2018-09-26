@@ -1,0 +1,130 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #1e5460, #0b4558, #00364f, #002844, #051937);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 1.6rem;
+  color: #DADADA;
+}
+
+h2 {
+  padding-top: .8em;
+}
+
+nav {
+  position: relative;
+  perspective: 60rem;
+}
+
+.cool > li > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin: 2rem;
+  border-radius: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.cool > li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown {
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  padding: 2rem;
+  top: -2rem;
+  border-radius: 2px;
+  transition: all 0.5s;
+  transform: translateY(10rem);
+  will-change: opacity;
+  display: none;
+  color: #000;
+}
+
+.trigger-enter .dropdown {
+  display: block;
+}
+
+.trigger-enter-active .dropdown {
+  opacity: 1;
+}
+
+.dropdownBackground {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 5rem 10rem rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+  transition:all 0.3s, opacity 0.1s, transform 0.2s;
+  transform-origin: 50% 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.dropdownBackground.open {
+  opacity: 1;
+}
+
+.cool li .dropdown {
+  min-width: 20rem;
+}
+
+.cool li .dropdown li {
+  padding: 1rem;
+  display: block;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.arrow {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background:#fff;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #ffc600;
+}
+
+a.button {
+  background: #000;
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
+.button[href*=twitter] { 
+  background: #019FE9;
+}
+.button[href*=facebook] { 
+  background: #3B5998;
+}
